@@ -1,0 +1,15 @@
+    h1{ color: rgb(255, 255, 255);
+    }
+
+    h2 {color: rgb(240, 240, 240);
+    }
+
+    .texto-simples{
+        color: aliceblue;
+    }
+
+    h4 {
+        color: blue;
+    }
+
+    body{ background-color: rgb(54, 2, 2);}
