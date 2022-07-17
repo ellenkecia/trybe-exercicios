@@ -52,6 +52,11 @@ div:nth-of-type(5)>h3 {
     color: fuchsia;
 }
 
+/* Atividade 4 usa o mesmo criterio anterior, aplicando a altura para aumentar a div */
 div:nth-of-type(3){
     height: 80px;
 }
+
+div:nth-child(odd) h3 {
+    font-style: italic
+  }
