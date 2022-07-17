@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@600;700&family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>HTML</title>
     <style>
         h1 {
             font-size: 65px;
             color: #ffa500;
+            font-family: sans-serif;
         }
+
         ul {
             background-color: blueviolet;
         }
+
         .cor-de-fundo {
             background-color: rgb(29, 161, 29);
         }
+
+        p {
+            font-weight: 600;
+            line-height:48;
+            text-decoration: underline overline;
+        }
+        body {
+            font-size: 16px;
+        }
+
+        #cor-amarela{
+            background-color: #ffa500;
+        }
+        #cor-vermelho{
+            background-color: red;
+        }
+        #cor-marrom {
+            background-color: brown;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <h1>Exercícios 3.2</h1>
     <p class="cor-de-fundo">Qual é a sua cor favorita?</p>
     <ul class="cor-de-fundo">
-      <li>Amarelo</li>
-      <li>Vermelho</li>
-      <li>Marrom</li>
+        <li id="cor-amarela">Amarelo</li>
+        <li id="cor-vermelho">Vermelho</li>
+        <li id="cor-marrom">Marrom</li>
     </ul>
-  </body>
+</body>
+
 </html>
