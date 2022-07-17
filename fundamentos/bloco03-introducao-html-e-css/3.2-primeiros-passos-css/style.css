@@ -1,0 +1,32 @@
+h1 {
+    font-size: 65px;
+    color: #ffa500;
+    font-family: sans-serif;
+}
+
+ul {
+    background-color: blueviolet;
+}
+
+.cor-de-fundo {
+    background-color: rgb(29, 161, 29);
+}
+
+p {
+    font-weight: 600;
+    line-height:48;
+    text-decoration: underline overline;
+}
+body {
+    font-size: 16px;
+}
+
+#cor-amarela{
+    background-color: #ffa500;
+}
+#cor-vermelho{
+    background-color: red;
+}
+#cor-marrom {
+    background-color: brown;
+}
