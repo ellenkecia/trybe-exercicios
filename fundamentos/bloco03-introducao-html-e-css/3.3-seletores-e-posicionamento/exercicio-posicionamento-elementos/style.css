@@ -22,14 +22,21 @@ Personagens pertencentes à Nintendo©
   
   .baloon {
     text-decoration: none;
+    position: absolute;
+    left: 257px;
   }
   
   .speach {
     font-size: 25px;
     position: absolute;
-    z-index: ;
+    z-index:3;
+    left: 273px;
+    top: 120px;
   }
   
   .bowser {
     width: 200px;
+    position: absolute;
+    left: 559px;
+    top: 210px;
   }
