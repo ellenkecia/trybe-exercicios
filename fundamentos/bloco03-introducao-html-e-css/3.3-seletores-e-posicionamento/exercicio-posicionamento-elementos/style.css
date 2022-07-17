@@ -8,12 +8,16 @@ Personagens pertencentes à Nintendo©
     width: 200px;
     position: absolute;
     z-index:2;
+    left: 12px;
   }
   
   .goomba {
     width: 100px;
     position:absolute;
+    height: 200px;
     z-index:1;
+    left: 62px;
+    top: 375px;
   }
   
   .baloon {
@@ -22,6 +26,8 @@ Personagens pertencentes à Nintendo©
   
   .speach {
     font-size: 25px;
+    position: absolute;
+    z-index: ;
   }
   
   .bowser {
