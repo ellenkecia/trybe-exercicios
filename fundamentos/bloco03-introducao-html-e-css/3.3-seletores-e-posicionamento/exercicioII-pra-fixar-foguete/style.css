@@ -8,18 +8,44 @@
 div:hover {
     border: solid 5px;
 }
-div:nth-of-type(1){
+
+/* Para fazer a div ter uma cor própria, utilizar nth-of-type(numero da dev). essa função diz que temos N divs, e na primeira o que quero aplicar */
+div:nth-of-type(1) {
     background-color: red;
 }
-div:nth-of-type(2){
+
+div:nth-of-type(2) {
     background-color: green;
 }
-div:nth-of-type(3){
+
+div:nth-of-type(3) {
     background-color: yellow;
 }
-div:nth-of-type(4){
+
+div:nth-of-type(4) {
     background-color: grey;
 }
-div:nth-of-type(5){
+
+div:nth-of-type(5) {
     background-color: lightskyblue;
+}
+
+/* Atividade 3 utiliza o mesmo recurso que a atividade 2, porém é preciso informar que quero referenciar o H3 referente aquela div. então é utilizado o >h3 */
+
+div:nth-of-type(1)>h3 {
+    color: blue;
+}
+
+div:nth-of-type(2)>h3 {
+    color: pink;
+}
+
+div:nth-of-type(3)>h3{
+    color: darkviolet;
+}
+div:nth-of-type(4)>h3{
+    color: darkturquoise;
+}
+div:nth-of-type(5)>h3{
+    color: fuchsia;
 }
