@@ -9,7 +9,7 @@ h1 {
     text-align: center;
     width: 200px;
     display: block;
-    margin-left: 200px;
+    margin-left:588px;
   }
 
   .second {
@@ -18,7 +18,8 @@ h1 {
     height: 50px;
     text-align: center;
     width: 300px;
-    display: inline-block;  
+    display: inline-block;
+    margin-left: 343px;
   }
 
   .third {
@@ -28,6 +29,7 @@ h1 {
     text-align: center;
     width: 300px;
     display: inline-block;
+    margin-left: 0px;
         
   }
  ul li{
@@ -35,5 +37,9 @@ h1 {
   }
 #sessao-02{
     text-align: center;
+}
+
+.sessao-01{
+
 }
 
