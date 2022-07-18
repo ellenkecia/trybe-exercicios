@@ -1,0 +1,65 @@
+/* Exercicio a ser realizado
+1 - Estilize as divs para que, ao passar o cursor por cima das mesmas, elas ganhem uma borda.
+2 - Faça cada div ter uma cor própria.
+3 - Estilize cada uma das tags h3.
+4 - Faça a terceira div ser maior que as demais.
+5 - Deixe as tags ímpares h3 com o texto em itálico. */
+
+div:hover {
+    border: solid 5px;
+}
+
+/* Para fazer a div ter uma cor própria, utilizar nth-of-type(numero da dev). essa função diz que temos N divs, e na primeira o que quero aplicar */
+div:nth-of-type(1) {
+    background-color: red;
+}
+
+div:nth-of-type(2) {
+    background-color: green;
+}
+
+div:nth-of-type(3) {
+    background-color: yellow;
+}
+
+div:nth-of-type(4) {
+    background-color: grey;
+}
+
+div:nth-of-type(5) {
+    background-color: lightskyblue;
+}
+
+/* Atividade 3 utiliza o mesmo recurso que a atividade 2, porém é preciso informar que quero referenciar o H3 referente aquela div. então é utilizado o >h3 */
+
+div:nth-of-type(1)>h3 {
+    color: blue;
+}
+
+div:nth-of-type(2)>h3 {
+    color: pink;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div:nth-of-type(3)>h3 {
+    color: darkviolet;
+}
+
+div:nth-of-type(4)>h3 {
+    color: darkturquoise;
+}
+
+div:nth-of-type(5)>h3 {
+    color: fuchsia;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Atividade 4 usa o mesmo criterio anterior, aplicando a altura para aumentar a div */
+div:nth-of-type(3) {
+    height: 80px;
+}
+
+/* Atividade 5 será usado o enesimo filho (nth-child) e coloca odd que significa impar e marcar a h3 */
+div:nth-child(odd) h3 {
+    font-style: italic
+}
