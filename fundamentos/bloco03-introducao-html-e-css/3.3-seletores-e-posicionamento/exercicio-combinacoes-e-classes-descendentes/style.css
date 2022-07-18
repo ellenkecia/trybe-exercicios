@@ -40,3 +40,10 @@ li {
 li em {
     font-weight: bold;
 }
+
+ul li:nth-child(-n+3) {
+    color: blue;
+}
+.pink-bg{
+    background-color: pink;
+}
