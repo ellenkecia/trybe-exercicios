@@ -1,14 +1,5 @@
-let tasksList = ['Tomar café', 'Reunião', 'Brincar com o cachorro'];
+let groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia'];
 
-console.log(tasksList.length);
-// 3
-
-let tasksList = ['Tomar café', 'Reunião', 'Brincar com o cachorro'];
-
-let searchForFirstTask = tasksList[0];
-console.log(searchForFirstTask);
-// Tomar café
-
-let searchForLastTask = tasksList[tasksList.length - 1];
-console.log(searchForLastTask);
-// Brincar com o cachorro
+for (let index = 0; index < groceryList.length; index ++){
+  console.log (groceryList[index])
+}
