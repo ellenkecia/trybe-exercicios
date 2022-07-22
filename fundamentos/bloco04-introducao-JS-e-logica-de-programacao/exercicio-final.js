@@ -3,6 +3,7 @@ let soma = 0;
 let media = 0.0;
 let maiorNumero = 0;
 let numerosImpares = 0;
+let menorNumero = 0;
 
 console.log(numbers);
 
@@ -41,3 +42,14 @@ if (numerosImpares === 0) {
 else {
   console.log (numerosImpares);
 }
+
+for (index = 0; index < numbers.length; index++){
+  if (index==0){
+    menorNumero= numbers[index];
+  }
+  if (menorNumero>numbers[index]){
+    menorNumero = numbers[index];
+  }
+}
+console.log(menorNumero);
+
