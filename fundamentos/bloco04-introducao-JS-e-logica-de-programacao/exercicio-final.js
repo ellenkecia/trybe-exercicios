@@ -31,9 +31,9 @@ for (let index = 0; index < numbers.length; index++) {
 }
 console.log(maiorNumero);
 
-for (index = 0; index < numbers.length; index++) {
+for (let index = 0; index < numbers.length; index++) {
   if (numbers[index] % 2 === 1) {
-    numerosImpares ++;
+    numerosImpares++;
   }
 
 }
@@ -41,14 +41,14 @@ if (numerosImpares === 0) {
   console.log('nenhum valor ímpar encontrado');
 }
 else {
-  console.log (numerosImpares);
+  console.log(numerosImpares);
 }
 
-for (index = 0; index < numbers.length; index++){
-  if (index==0){
-    menorNumero= numbers[index];
+for ( let index = 0; index < numbers.length; index++) {
+  if (index == 0) {
+    menorNumero = numbers[index];
   }
-  if (menorNumero>numbers[index]){
+  if (menorNumero > numbers[index]) {
     menorNumero = numbers[index];
   }
 }
@@ -60,5 +60,5 @@ for (let index = 1; index <= 25; index++) {
 console.log(novoNumeros);
 
 for (let index = 0; index < novoNumeros.length; index++) {
-  console.log (novoNumeros[index]/2);
+  console.log(novoNumeros[index] / 2);
 }
