@@ -4,6 +4,7 @@ let media = 0.0;
 let maiorNumero = 0;
 let numerosImpares = 0;
 let menorNumero = 0;
+let novoNumeros = [];
 
 console.log(numbers);
 
@@ -53,3 +54,7 @@ for (index = 0; index < numbers.length; index++){
 }
 console.log(menorNumero);
 
+for (let index = 1; index <= 25; index++) {
+  novoNumeros.push(index);
+}
+console.log(novoNumeros);
