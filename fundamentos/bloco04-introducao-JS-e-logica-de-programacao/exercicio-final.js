@@ -58,3 +58,7 @@ for (let index = 1; index <= 25; index++) {
   novoNumeros.push(index);
 }
 console.log(novoNumeros);
+
+for (let index = 0; index < novoNumeros.length; index++) {
+  console.log (novoNumeros[index]/2);
+}
