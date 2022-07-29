@@ -11,6 +11,6 @@ document.getElementsByClassName('center-content')[0].style.background = 'rgb(255
 // Crie e execute uma função que corrija o texto da tag <h1>.
 document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - JavaScript';
 // Crie e execute uma função que modifique todo o texto da tag <p> para maiúsculo.
-document.getElementsByTagName('p')[0].textContent.toUpperCase()
+document.getElementsByTagName('p')[0].innerHTML = document.getElementsByTagName('p')[0].textContent.toUpperCase()
 // Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
 // */s
