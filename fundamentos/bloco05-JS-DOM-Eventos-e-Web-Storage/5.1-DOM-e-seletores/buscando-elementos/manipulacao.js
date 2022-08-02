@@ -22,4 +22,4 @@ const acessarTexto = elementoOndeVoceEsta.nextSibling;
 const terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
 
 // 8 Agora acesse o terceiroFilho a partir de pai.
-const terceiroFilho = acessarPai.lastElementChild.previousElementSibling;
+terceiroFilho = acessarPai.lastElementChild.previousElementSibling;
