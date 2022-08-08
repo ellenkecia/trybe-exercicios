@@ -29,6 +29,9 @@ header{
   align-content: space-around;
   justify-content: space-around;
   align-items: center;
+}
 
-
+p{
+  display: flex;
+  justify-content: center;
 }
