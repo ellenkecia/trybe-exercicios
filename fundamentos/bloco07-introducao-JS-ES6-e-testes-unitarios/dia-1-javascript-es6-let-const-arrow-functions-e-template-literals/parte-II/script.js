@@ -18,11 +18,9 @@ console.log(fatoral(5));
 
 const novoArray = (fraseInicial) => {
     let fraseFinal = fraseInicial.split(' ');
-    return fraseFinal.sort()[0]; 
+    return fraseFinal.sort()[0];
 }
-
 console.log(novoArray('Meu nome é Ellen'));
-
 
 // 🚀 Crie uma página HTML que possua um contador de cliques.
 // Além da estrutura básica do HTML, sua página deve possuir:
@@ -33,10 +31,12 @@ console.log(novoArray('Meu nome é Ellen'));
 // Crie a lógica do evento, para que a cada click no botão seja adicionado o valor de 1. Exemplo: Caso não tenha sido realizado nenhum click, o valor renderizado será de 0. Caso o botão seja clicado 5 vezes o valor renderizado no HTML será de 5.
 // Dica: Nesse exercício utilize document. getElementById para retornar o elemento do DOM que deseja.
 
-
-
-
-
+let count = 0;
+let button = document.getElementById('button');
+let iniciarContador = button.addEventListener('click', () => {
+    count++;
+    button.innerText = `${count} curtidas`;
+});
 
 
 // 🚀 Crie duas funções JavaScript com as seguintes especificações:
