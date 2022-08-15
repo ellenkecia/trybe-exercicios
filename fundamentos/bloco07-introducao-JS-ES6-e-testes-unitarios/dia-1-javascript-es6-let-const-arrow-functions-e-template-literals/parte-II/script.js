@@ -8,20 +8,20 @@
 // Dica: Armazene a chamada da função em uma varíavel para imprimir no terminal seu resultado.
 // Bônus: tente fazer o mesmo exercício de forma recursiva. Spoiler: É possível resolver com uma linha usando ternary operator.
 
-
-
-
-
+const fatoral = (n) => n > 1 ? n * fatoral(n - 1) : n;
+console.log(fatoral(5));
 
 // Crie uma função que receba uma frase como parâmetro e retorne a maior palavra da frase.
-// Exemplo:
-// Copiar
-//       longestWord('Antônio foi no banheiro e não sabemos o que aconteceu') // retorna 'aconteceu'
+// Exemplo:longestWord('Antônio foi no banheiro e não sabemos o que aconteceu') // retorna 'aconteceu'
 // Dica: Nesse exercício será necessário utilizar os conhecimentos sobre array, método split e loop for/of.
 // Bônus (opcional): tente fazer o mesmo exercício utilizando o método array.sort().
 
+const novoArray = (fraseInicial) => {
+    let fraseFinal = fraseInicial.split(' ');
+    return fraseFinal.sort()[0]; 
+}
 
-
+console.log(novoArray('Meu nome é Ellen'));
 
 
 // 🚀 Crie uma página HTML que possua um contador de cliques.
