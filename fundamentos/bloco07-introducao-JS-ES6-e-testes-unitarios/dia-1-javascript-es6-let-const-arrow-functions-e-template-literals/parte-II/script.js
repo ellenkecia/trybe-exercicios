@@ -50,6 +50,15 @@ let iniciarContador = button.addEventListener('click', () => {
 // Parâmetro: 'Bebeto'
 // Retorno: 'Tryber Bebeto aqui!'
 // Spoiler: O método split() pode ser utilizado de diferentes maneiras, como separar as palavras de um texto.
+
+const substituaX = (nome) => {
+    const frase = 'Tryber x aqui!';
+    let fraseAtualizada = frase.replace('x', nome);
+    return fraseAtualizada;
+}
+
+console.log(substituaX('Ellen'));
+
 // Função 2: Escreva uma função que irá receber o retorno da Função 1 por parâmetro e retornará uma nova string.
 // O nome da função deverá ser minhasSkills;
 // A função deverá receber o retorno da Função 1 - substituaX por parâmetro;
@@ -62,3 +71,9 @@ let iniciarContador = button.addEventListener('click', () => {
 // JavaScript
 // HTML
 // CSS
+
+const minhasSkills = (retornoSubstituaX) => {
+    let skills = ['JavaScript', 'HTMl', 'CSS'];
+    return `${retornoSubstituaX} Minhas três principais habilidades são: ${skills}`;
+}
+console.log(minhasSkills(substituaX('Ellen')));
