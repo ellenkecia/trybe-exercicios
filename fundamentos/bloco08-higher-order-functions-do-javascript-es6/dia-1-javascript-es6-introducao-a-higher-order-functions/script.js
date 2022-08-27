@@ -24,6 +24,14 @@ const newEmployees = (callback) => {
 //    se o número apostado é igual ao número sorteado. O retorno da sua HOF 
 //    deve ser uma string (Ex: "Tente novamente" ou "Parabéns você ganhou").
 
+const checkNumber = (myNumber, number) => myNumber === number;
+
+const gerarSorteio = (myNumber, callback) => {
+  const number = Math.floor((Math.random()*5)+1);
+  return callback(myNumber, number) ? `Parabéns você ganhou` : `Tente novamente`;
+}
+
+console.log(gerarSorteio(1, checkNumber));
 
 
 // 3 - Crie uma HOF que receberá três parâmetros:
@@ -33,5 +41,26 @@ const newEmployees = (callback) => {
 // Uma resposta correta adiciona 1 ponto à pontuação final;
 // A ausência de uma resposta não altera a pontuação (quando for "N.A");
 // Uma resposta incorreta reduz a pontuação final em 0.5 ponto.
-
 // Ao final, a HOF deve retornar o total de pontos obtidos através das respostas fornecidas pela pessoa estudante. Utilize os seguintes arrays:
+
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+const compareAnswers = (rightAnswer, studentAnswer) => {
+  if (rightAnswer === studentAnswer) {
+    return 1;
+  } if (studentAnswer === 'N.A') {
+    return 0;
+  }
+  return -0.5;
+};
+
+const countPoints = (rightAnswers, studentAnswers, action) => {
+  let counter = 0;
+  for (let index = 0; index < rightAnswers.length; index += 1) {
+    const actionReturn = action(rightAnswers[index], studentAnswers[index]);
+    counter += actionReturn;
+  }
+  return `Resultado final: ${counter} pontos`;
+};
+
+console.log(countPoints(RIGHT_ANSWERS, STUDENT_ANSWERS, compareAnswers));
