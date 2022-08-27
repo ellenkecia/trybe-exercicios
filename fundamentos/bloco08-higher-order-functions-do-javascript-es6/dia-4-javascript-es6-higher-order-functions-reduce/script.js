@@ -6,8 +6,11 @@ const arrays = [
   ];
   
   function flatten() {
-    // escreva seu código aqui
-  }
+    return arrays.reduce((acc, curr)=> acc.concat(curr), [])
+}
+
+console.log(flatten());
+
 
 //   Para os exercícios 2, 3 e 4 considere o seguinte array:
 
@@ -79,19 +82,32 @@ const arrays = [
 //   2 - Crie uma string com os nomes de todas as pessoas autoras.
 
 function reduceNames() {
-  // escreva seu código aqui
+    return books.reduce((acc, curr)=> `${acc} ${curr.author.name},`,'')
 }
+
+console.log(reduceNames())
+
 // 🚀 3- Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
 
 function averageAge() {
-  // escreva seu código aqui
+    const numerosDeLivros = books.length;
+    const somaIdades = books.reduce((soma, livros)=>(
+        soma + (livros.releaseYear - livros.author.birthYear)),0);
+    return somaIdades / numerosDeLivros;
 }
-
+console.log(averageAge())
 // 🚀 4- Encontre o livro com o maior nome.
 
 function longestNamedBook() {
-  // escreva seu código aqui
+    return books.reduce((maiorLivro, livroAtual) => {
+      if (livroAtual.name.length > maiorLivro.name.length){
+        return livroAtual;
+      }
+      return maiorLivro;
+    });
 }
+
+console.log(longestNamedBook())
 
 // 🚀 5- Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra a maiúscula ou minúscula.
 
@@ -102,7 +118,10 @@ const names = [
 ];
 
 function containsA() {
-  // escreva seu código aqui
+  return names.reduce((acc, currWord)=> acc + currWord.split('').reduce((acumulator, currletter)=>{ 
+    if (currletter === 'a' || currletter === 'A') return + 1;
+    return acumulator
+  },0),0)
 }
 // 🚀 6- Para o próximo exercício você deve criar um novo array de objetos a partir das informações das constantes students e grades, 
 // onde cada objeto desse novo array terá o formato { name: nome do aluno, average: media das notas }. Para isso vamos assumir que a posição do index 0 
@@ -113,7 +132,10 @@ const students = ['Pedro Henrique', 'Miguel', 'Maria Clara'];
 const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
 function studentAverage() {
-  // escreva seu código aqui
+  return nameAndAverage = students.map((student, index) => (
+    {
+    name: student,
+    average: (grades[index].reduce((acc, curr) => acc + curr, 0) / grades[index].length),
+  }
+  ));
 }
-
-
