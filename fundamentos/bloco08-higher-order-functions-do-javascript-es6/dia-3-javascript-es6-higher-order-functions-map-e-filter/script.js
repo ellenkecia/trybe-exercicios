@@ -113,3 +113,4 @@ const nomeResumidoAutor = books.filter((book)=>
   && book.author.name[4] ===  '.'
   && book.author.name[7] === '.')[0].name;
 console.log(nomeResumidoAutor);
+
