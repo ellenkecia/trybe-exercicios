@@ -154,3 +154,92 @@
 
 // sendMarsTemperature(temperatureInFahrenheit);
 // sendMarsTemperature(greet); // Imprime "Olá! Curiosity aqui. Nesse momento são 36ºC em Marte", por exemplo
+
+// 6 - Por fim, o robô Curiosity tem uma taxa de sucesso de envio de mensagem de 60% devido ao fato de o robô já estar muito ocupado com outras operações. 
+// Logo, adicione na função sendMarsTemperature uma outra callback que contenha as ações a serem tomadas em caso de falha.
+
+const messageDelay = () => Math.floor(Math.random() * 5000);
+
+const getMarsTemperature = () => {
+  const maxTemperature = 58;
+  return Math.floor(Math.random() * maxTemperature);
+}
+
+const toFahrenheit = (degreeCelsius) => (degreeCelsius * (9 / 5)) + 32;
+
+const temperatureInFahrenheit = (temperature) =>
+  console.log(`It is currently ${toFahrenheit(temperature)}ºF at Mars`);
+
+const greet = (temperature) =>
+  console.log(`Hi there! Curiosity here. Right now is ${temperature}ºC at Mars`);
+
+const handleError = (errorReason) =>
+  console.log(`Error getting temperature: ${errorReason}`);
+
+// definição da função sendMarsTemperature...
+const sendMarsTemperature = (onSuccess, onError) => {
+  const currentTemperature = getMarsTemperature();
+  const messageSuccessfullySent = Math.random() <= 0.6;
+  setTimeout(() => {
+      if(messageSuccessfullySent) onSuccess(currentTemperature)
+      else onError('Robot is busy');
+  }, messageDelay());
+}
+
+// imprime "It is currently 47ºF at Mars", por exemplo, ou "Error getting temperature: Robot is busy"
+sendMarsTemperature(temperatureInFahrenheit, handleError);
+
+// imprime "Hi there! Curiosity here. Right now is 53ºC at Mars", por exemplo, ou "Error getting temperature: Robot is busy"
+sendMarsTemperature(greet, handleError);
+
+//
+//
+// 7 - Para o próximo exercício, você vai sentir na pele o primeiro dia de um treinador Pokémon!
+// No laboratório do Professor Carvalho, você é informado de que existem três pokémons disponíveis: Bulbasaur, Charmander e Squirtle.
+// Complete a função handlePokemonSearch de modo que:
+// Ao chamar a função getPokemonDetails com um pokémon existente, imprime no console a mensagem com os detalhes deste pokémon.
+// Ao chamar a função getPokemonDetails com um pokémon não existente, imprime no console o erro.
+//
+//
+const pokemons = [
+  {
+    name: 'Bulbasaur',
+    type: 'Grama',
+    ability: 'Raio Solar',
+  },
+  {
+    name: 'Charmander',
+    type: 'Fogo',
+    ability: 'Lança Chamas',
+  },
+  {
+    name: 'Squirtle',
+    type: 'Água',
+    ability: 'Jato de Água',
+  },
+];
+
+function getPokemonDetails(selectedPokemon, callback) {
+  const foundPokemon = pokemons.find((pokemon) => pokemon.name === selectedPokemon);
+
+  setTimeout(() => {
+    if (foundPokemon === undefined) {
+      return callback(new Error('Não temos esse pokémon para você :('), null);
+    }
+
+    const { name, type, ability } = foundPokemon;
+
+    const messageFromProfOak = `Olá, seu pokémon é o ${name}, o tipo dele é ${type} e a habilidade principal dele é ${ability}`;
+
+    callback(null, messageFromProfOak);
+  }, 2000);
+}
+
+const handlePokemonSearch = (error, message) => {
+  if (error){
+    console.log(error);
+  } console.log(message);
+
+};
+
+getPokemonDetails('Bulbasau', handlePokemonSearch);
