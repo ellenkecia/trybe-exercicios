@@ -80,7 +80,7 @@
 // 3 - A função getPlanet abaixo imprime o planeta Marte de forma síncrona. Modifique a função getPlanet, de forma que Marte seja impresso assincronamente, após 4 segundos.
 //
 //
-// const time = 4000
+// const time = 4000;
 // const getPlanet = () => {
 // setTimeout(() => {
 //   const mars = {
@@ -106,25 +106,51 @@
 // Dica: utilize a função messageDelay para gerar o tempo de espera necessário
 //
 //
-const messageDelay = () => Math.floor(Math.random() * 5000);
+// const messageDelay = () => Math.floor(Math.random() * 5000);
 
-const getMarsTemperature = () => {
-    const maxTemperature = 58;
-    return Math.floor(Math.random() * maxTemperature);
-};
-
-// crie a função sendMarsTemperature abaixo
-
-const sendMarsTemperature = () => {
-  // const temperaturaCorreta = getMarsTemperature();
-  setTimeout(() => console.log(`A temperatura de Marte é: ${getMarsTemperature()} graus celsius`), messageDelay());
-};
-
-sendMarsTemperature();
-
-// const sendMarsTemperature = () => {
-//   const currentTemperature = getMarsTemperature();
-//   setTimeout(() => console.log(`A temperatura de Marte é: ${currentTemperature} graus celsius`), messageDelay());
+// const getMarsTemperature = () => {
+//     const maxTemperature = 58;
+//     return Math.floor(Math.random() * maxTemperature);
 // };
 
-// sendMarsTemperature(); // Imprime "A temperatura de Marte é: 20 graus celsius", por exemplo
+// // crie a função sendMarsTemperature abaixo
+
+// const sendMarsTemperature = () => {
+//   setTimeout(() => console.log(`A temperatura de Marte é: ${getMarsTemperature()} graus celsius`), messageDelay());
+// };
+
+// sendMarsTemperature();
+
+//
+//
+// 5 - Agora que você fez a função que envia a temperatura de Marte, vamos utilizar essa temperatura para realizar outras operações. 
+// No código abaixo, temos as funções temperatureInFahrenheit e greet. Elas irão utilizar a temperatura obtida pela função getMarsTemperature para realizar nossas operações. Escreva a função sendMarsTemperature de forma que:
+// A função sendMarsTemperature receba uma callback;
+// Dica: Essa callback será uma de nossas funções: temperatureInFahrenheit ou greet;
+// A função sendMarsTemperature execute essa callback depois de no máximo 5 segundos.
+// Dica: Lembre-se de nossa função messageDelay para gerar o tempo de espera necessário.
+
+// const messageDelay = () => Math.floor(Math.random() * 5000);
+
+// const getMarsTemperature = () => {
+//   const maxTemperature = 58;
+//   return Math.floor(Math.random() * maxTemperature);
+// };
+
+// const toFahrenheit = (degreeCelsius) => (degreeCelsius * (9 / 5)) + 32;
+
+// const temperatureInFahrenheit = (temperature) =>
+//   console.log(`Atualmente está ${toFahrenheit(temperature)}ºF em Marte`);
+
+// const greet = (temperature) =>
+//   console.log(`Olá! Curiosity aqui. Nesse momento está ${temperature}ºC em Marte`);
+
+// // Definição da função sendMarsTemperature...
+
+// const sendMarsTemperature = (callback) => {
+//   const recebeFunc = getMarsTemperature();
+//   setTimeout(() => callback(recebeFunc),messageDelay());
+// };
+
+// sendMarsTemperature(temperatureInFahrenheit);
+// sendMarsTemperature(greet); // Imprime "Olá! Curiosity aqui. Nesse momento são 36ºC em Marte", por exemplo
