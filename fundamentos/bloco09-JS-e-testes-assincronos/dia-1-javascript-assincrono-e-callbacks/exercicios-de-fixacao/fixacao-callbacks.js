@@ -47,5 +47,6 @@ const getUser = (callback) => {
 
 };
 
+
 getUser(userFullName) // deve imprimir "Olá! Meu nome é Ivan Ivanovich" depois de um certo tempo
 getUser(userNationality) // deve imprimir "Ivan é Russo" depois de um certo tempo
