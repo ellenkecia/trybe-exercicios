@@ -10,26 +10,41 @@ class App extends React.Component {
     this.handleClickOne = this.handleClickOne.bind(this) // escrito para a função estar ligada ao this//
     this.handleClickTwo = this.handleClickTwo.bind(this) // escrito para a função estar ligada ao this//
     this.handleClickThree = this.handleClickThree.bind(this) // escrito para a função estar ligada ao this//
+
+    this.state ={
+      clickBtnOne: 0,
+      clickBtnTwo: 0,
+      clickBtnThree: 0,
+    }; 
+  
   }
 
+  // Para alterarmos o estado de um componente, precisamos executar a função this.setState()
   handleClickOne() {
-    console.log("Clicou no botão 1!");
+    this.setState((prevState) => ({
+      clickBtnOne: prevState.clickBtnOne + 1,
+    }))
   }
 
   handleClickTwo() {
-    console.log("Clicou no botão 2!");
+    this.setState((prevState) => ({
+      clickBtnTwo: prevState.clickBtnTwo +1,
+    }))
   }
 
   handleClickThree() {
-    console.log("Clicou no botão 3!");
+    this.setState((prevState) => ({
+      clickBtnThree: prevState.clickBtnThree + 1,
+    }))
   }
 
   render() {
+    const { clickBtnOne , clickBtnTwo , clickBtnThree } = this.state
     return (
       <div>
-        <button onClick={ this.handleClickOne }>Botão</button>
-        <button onClick={ this.handleClickTwo }>Botão 2</button>
-        <button onClick={ this.handleClickThree }>Botão 3</button>
+        <button onClick={ this.handleClickOne }>{`Cliques no botão 1: ${clickBtnOne}`}</button>
+        <button onClick={ this.handleClickTwo }>{`Cliques no botão 2: ${clickBtnTwo}`}</button>
+        <button onClick={ this.handleClickThree }>{`Cliques no botão 3: ${clickBtnThree}`}</button>
       </div>
     );
   }
