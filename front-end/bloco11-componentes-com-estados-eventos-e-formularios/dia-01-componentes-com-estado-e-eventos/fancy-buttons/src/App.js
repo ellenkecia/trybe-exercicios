@@ -7,19 +7,29 @@ import React from "react";
 class App extends React.Component {
   constructor(){
     super()
-    this.handleClick = this.handleClick.bind(this) // escrito para a função estar ligada ao this//
+    this.handleClickOne = this.handleClickOne.bind(this) // escrito para a função estar ligada ao this//
+    this.handleClickTwo = this.handleClickTwo.bind(this) // escrito para a função estar ligada ao this//
+    this.handleClickThree = this.handleClickThree.bind(this) // escrito para a função estar ligada ao this//
   }
 
-  handleClick() {
-    console.log("Clicou no botão!");
+  handleClickOne() {
+    console.log("Clicou no botão 1!");
+  }
+
+  handleClickTwo() {
+    console.log("Clicou no botão 2!");
+  }
+
+  handleClickThree() {
+    console.log("Clicou no botão 3!");
   }
 
   render() {
     return (
       <div>
-        <button onClick={ this.handleClick }>Botão</button>
-        <button onClick={ this.handleClick }>Botão 2</button>
-        <button onClick={ this.handleClick }>Botão 3</button>
+        <button onClick={ this.handleClickOne }>Botão</button>
+        <button onClick={ this.handleClickTwo }>Botão 2</button>
+        <button onClick={ this.handleClickThree }>Botão 3</button>
       </div>
     );
   }
