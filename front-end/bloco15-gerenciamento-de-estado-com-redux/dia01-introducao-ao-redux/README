@@ -38,3 +38,23 @@ Subscribe - toda vez que atualizar o estado e renderizado atualizado
 
 Para corrigir o deprecation warning da função *createStore() - import { legacy_createStore as createStore } from 'redux';
 
+CONFIGURAÇÕES INICIAIS
+
+- Iniciar uma aplicação
+    npm init -y
+- Instalar o vit
+    npm i vite
+- Configurar o script
+    no package.json colocar no script o vite
+
+CONFIGURANDO O REDUX
+- Instalar Redux
+    npm install redux
+- Importações
+  createStore
+
+CHECKLIST
+- Criar reducer com parametros de state e action
+- Criar o store e passar o reducer como paramentro  
+
+
